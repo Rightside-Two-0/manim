@@ -26,3 +26,8 @@ class SquareToCircle(Scene):
             self.play(ShowCreation(square))
             self.play(Transform(square, circle))
             self.play(FadeOut(square))
+class WriteText(Scene):
+    def construct(self):
+        text = TextMobject('This is some text')
+        self.play(GrowFromCenter(text))
+        self.wait(3)
