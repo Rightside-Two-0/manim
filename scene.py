@@ -12,9 +12,11 @@
 #             \V/ . +
 #    יהוה      /_\  .`.
 #   ======== _/W\_ =אדני:By: Two.0:.*
-import manim
+from manim import *
 class SquareToCircle(Scene):
     def construct(self):
-        circle = Circle()
-        circle.set_fill(PINK, opacity=0.5)
-        self.play(ShowCreation(circle))
+        for i in range(10):
+            circle = Circle()
+            circle.set_fill(PINK, opacity=0.5)
+            self.play(ShowCreation(circle))
+            self.wait(1)
