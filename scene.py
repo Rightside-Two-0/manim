@@ -61,6 +61,26 @@ class displayEquations(Scene):
         self.play(ReplacementTransform(first_line, equation), FadeOut(second_line))
         self.wait(3)
 
+class Shapes(Scene):
+    def construct(self):
+        ######Code######
+        #Making shapes
+        circle = Circle()
+        square = Square()
+        triangle=Polygon(np.array([1,0,0]),np.array([0,1,0]),np.array([0,0,1]))
+
+        #Showing shapes
+        self.play(ShowCreation(circle))
+        self.play(FadeOut(circle))
+        self.play(GrowFromCenter(square))
+        self.play(Transform(square,triangle))
+
+class Helloworld(Scene):
+    def construct(self):
+        text = TextMobject('Hello World!')
+        self.play(Write(text))
+        self.wait(3)
+
 class CreateGraph(GraphScene):
     CONFIG = {
         'x_min': -3,
