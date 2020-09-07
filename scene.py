@@ -3,7 +3,7 @@
 # @Email:  philip@two-0.org
 # @Project: Python Challenge
 # @Last modified by:   two_0
-# @Last modified time: 06-09-2020
+# @Last modified time: 07-09-2020
 # @License: https://github.com/Rightside-Two-0/Rightside_Two.0/blob/master/LICENSE
 # @Copyright: Copyright 2020 © - All Rights Reserved
 #     ___ __ ._`.*.'_._ ____ רףאל
@@ -26,6 +26,13 @@ class SquareToCircle(Scene):
             self.play(ShowCreation(square))
             self.play(Transform(square, circle))
             self.play(FadeOut(square))
+
+class Positions(Scene):
+    def construct(self):
+        dot = Dot()
+        dot.to_edge(UP)
+        self.add(dot)
+        self.wait(3)
 
 class displayText(Scene):
     def construct(self):
@@ -95,10 +102,10 @@ class CreateGraph(GraphScene):
     def construct(self):
         # Create Graph
         self.setup_axes(animate=True)
-        graph = self.get_graph(lambda x: x**2, WHITE)
+        graph = self.get_graph(lambda x: x**2, RED)
         graph_label = self.get_graph_label(graph, label='x^{2}')
 
-        graph2 = self.get_graph(lambda x: x**3, WHITE)
+        graph2 = self.get_graph(lambda x: x**3, YELLOW)
         graph_label2 = self.get_graph_label(graph2, label='x^{3}')
 
         # Display graph
