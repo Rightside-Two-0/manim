@@ -3,7 +3,7 @@
 # @Email:  philip@two-0.org
 # @Project: Python Challenge
 # @Last modified by:   two_0
-# @Last modified time: 05-09-2020
+# @Last modified time: 06-09-2020
 # @License: https://github.com/Rightside-Two-0/Rightside_Two.0/blob/master/LICENSE
 # @Copyright: Copyright 2020 © - All Rights Reserved
 #     ___ __ ._`.*.'_._ ____ רףאל
@@ -15,7 +15,7 @@
 from manim import *
 class SquareToCircle(Scene):
     def construct(self):
-        for i in range(10):
+        for i in range(2):
             circle = Circle()
             square = Square()
             square.flip(RIGHT)
@@ -74,6 +74,7 @@ class Shapes(Scene):
         self.play(FadeOut(circle))
         self.play(GrowFromCenter(square))
         self.play(Transform(square,triangle))
+        self.wait(5)
 
 class Helloworld(Scene):
     def construct(self):
